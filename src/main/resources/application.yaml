@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/OptimizationTest
+    username: postgres
+    password: qwerty
+  liquibase:
+    enabled: true

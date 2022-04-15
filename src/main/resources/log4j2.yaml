@@ -1,0 +1,28 @@
+Configuration:
+  Properties:
+    Property:
+      #      - name: appender.hibernate.log_file_name
+      #        value: system-metrics-hibernate.log
+      - name: pattern.layout.default
+        value: "[%level{length=1}] %d{yyyy-MM-dd HH:mm:ss.SSS} [%32.32t] - %msg%n"
+
+  Appenders:
+    Console:
+      - name: STD_OUT
+        PatternLayout:
+          pattern: ${pattern.layout.default}
+  #      - name: APPENDER_HIBERNATE
+  #        PatternLayout:
+  #          pattern: ${pattern.layout.default}
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: STD_OUT
+#    Logger:
+#      - name: org.hibernate.sql
+#        level: error
+#        additivity: false
+#        AppenderRef:
+#          - ref: APPENDER_HIBERNATE
